@@ -1,0 +1,11 @@
+{
+    "name": "kusmayadi/slightly-big-flip",
+    "description": "Flip.id recruitement test",
+    "authors": [
+        {
+            "name": "Kusmayadi",
+            "email": "kusmayadi@gmail.com"
+        }
+    ],
+    "require": {}
+}
