@@ -22,8 +22,8 @@ class EnvTest extends TestCase
      */
     public function value()
     {
-        $dbhost = Env::get('DB_HOST');
+        $dbdriver = Env::get('DB_DRIVER');
 
-        $this->assertEquals($dbhost, 'localhost');
+        $this->assertEquals($dbdriver, 'sqlite');
     }
 }

@@ -6,10 +6,16 @@ class Env
 {
     public static function get($key, $default = '')
     {
-        $envFile = __DIR__ . '/../.env';
+        if (defined('IS_TEST')) {
+            $envFilename = '.env.testing';
+        } else {
+            $envFilename = '.env';
+        }
+
+        $envFile = __DIR__ . '/../' . $envFilename;
 
         if (!file_exists($envFile)) {
-            throw new \Exception('No .env file exists.');
+            throw new \Exception($envFilename . ' file doesn\'t exists.');
         } else {
             $rawEnvVars = array_filter(explode("\n", file_get_contents($envFile)));
             $envVars = [];
