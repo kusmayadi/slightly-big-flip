@@ -12,8 +12,7 @@ $db = new Db();
 switch ($argv[1]) {
     case 'up':
         $db->migrateUp('disbursements', [
-            'id' => 'INT UNSIGNED AUTO_INCREMENT PRIMARY KEY',
-            'transaction_id' => 'INT UNSIGNED NOT NULL',
+            'id' => 'INT UNSIGNED PRIMARY KEY',
             'amount' => 'DECIMAL(10) NOT NULL',
             'status' => 'VARCHAR(10) NOT NULL',
             'transaction_timestamp' => 'DATETIME NOT NULL',
@@ -24,8 +23,8 @@ switch ($argv[1]) {
             'receipt' => 'VARCHAR(255) NULL',
             'time_served' => 'DATETIME NULL',
             'fee' => 'DECIMAL(5) NOT NULL',
-            'created' => 'DATETIME NOT NULL',
-            'updated' => 'DATETIME NULL'
+            'created_at' => 'DATETIME NOT NULL',
+            'updated_at' => 'DATETIME NULL'
         ]);
     break;
 
