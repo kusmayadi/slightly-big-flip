@@ -62,6 +62,5 @@ class HttpTest extends TestCase
         $this->assertEquals('1234567890', $response['data']['account_number']);
         $this->assertEquals('10000', $response['data']['amount']);
         $this->assertEquals('sample remark', $response['data']['remark']);
-        $this->assertEquals('SUCCESS', $response['data']['status']);
     }
 }
