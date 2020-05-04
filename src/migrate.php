@@ -1,4 +1,5 @@
 <?php
+
 include('autoload.php');
 
 use Lib\Db;
@@ -12,7 +13,7 @@ $db = new Db();
 switch ($argv[1]) {
     case 'up':
         $db->migrateUp('disbursements', [
-            'id' => 'INT UNSIGNED PRIMARY KEY',
+            'id' => 'BIGINT UNSIGNED PRIMARY KEY',
             'amount' => 'DECIMAL(10) NOT NULL',
             'status' => 'VARCHAR(10) NOT NULL',
             'transaction_timestamp' => 'DATETIME NOT NULL',
@@ -21,7 +22,7 @@ switch ($argv[1]) {
             'beneficiary_name' => 'VARCHAR(50) NOT NULL',
             'remark' => 'VARCHAR(255) NULL',
             'receipt' => 'VARCHAR(255) NULL',
-            'time_served' => 'DATETIME NULL',
+            'time_served' => 'DATETIME DEFAULT NULL',
             'fee' => 'DECIMAL(5) NOT NULL',
             'created_at' => 'DATETIME NOT NULL',
             'updated_at' => 'DATETIME NULL'
