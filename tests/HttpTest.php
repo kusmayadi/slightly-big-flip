@@ -8,7 +8,6 @@ use Faker\Factory;
 class HttpTest extends TestCase
 {
     private $data;
-    private $transactionId;
 
     public function setUp() :void
     {
@@ -34,8 +33,6 @@ class HttpTest extends TestCase
 
         $http = new Http();
         $response = $http->post($endpoint, $this->data);
-
-        $this->transactionId = $response['data']['id'];
 
         $this->assertEquals(200, $response['info']['http_code']);
         $this->assertEquals('application/json', $response['info']['content_type']);
