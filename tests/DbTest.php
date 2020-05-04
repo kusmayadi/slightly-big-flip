@@ -56,6 +56,8 @@ class DbTest extends TestCase
         $checkTable = $this->dbh->query('SELECT 1 FROM ' . $this->testTable);
 
         $this->assertisObject($checkTable);
+
+        $this->dbh = null;
     }
 
     /**
@@ -80,6 +82,8 @@ class DbTest extends TestCase
 
         $this->assertEquals($user['name'], $name);
         $this->assertEquals($user['email'], $email);
+
+        $this->dbh = null;
     }
 
     /**
