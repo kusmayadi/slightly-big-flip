@@ -2,7 +2,7 @@
 ![Travis (.org)](https://img.shields.io/travis/kusmayadi/slightly-big-flip?style=flat-square)
 
 
-This repo contains scripts as part of recruitment process at Flip.id.
+This repo contains scripts as part of recruitment process at Flip.id and it's just an MVP/PoC based on requirements. 
 
 Please note that the main program is under `src/` folder and I don't use any external libraries nor any frameworks for the main program.
 
