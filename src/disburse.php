@@ -25,7 +25,7 @@ switch (count($argv)){
     break;
 
     case 2:
-        // possibly csv
+        // csv
         $csv = array_map('str_getcsv', file($argv[1]));
 
         $keys = ['bank_code', 'account_number', 'amount', 'remark'];
