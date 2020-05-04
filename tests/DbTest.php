@@ -48,7 +48,7 @@ class DbTest extends TestCase
         $db = new Db();
 
         $db->migrateUp($this->testTable, [
-            'id' => 'INT UNSIGNED AUTO_INCREMENT PRIMARY_KEY',
+            'id' => 'INT UNSIGNED AUTO_INCREMENT PRIMARY KEY',
             'name' => 'VARCHAR(125) NULL',
             'email' => 'VARCHAR(255) NOT NULL'
         ]);

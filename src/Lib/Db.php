@@ -13,7 +13,7 @@ class Db
         $dbHost = Config::get('database.host');
         $dbName = Config::get('database.name');
         $dbUser = Config::get('database.user');
-        $dbPassword = Config::get('databse.password');
+        $dbPassword = Config::get('database.password');
 
         if ($dbDriver == 'sqlite') {
             $this->db = new \PDO('sqlite:' . __DIR__ . '/../../' . $dbName);
