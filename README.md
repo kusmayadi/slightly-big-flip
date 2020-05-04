@@ -6,7 +6,7 @@ This repo contains scripts as part of recruitment process at Flip.id.
 
 Please note that the main program is under `src/` folder and I don't use any external libraries nor any frameworks for the main program.
 
-I use phpunit and one external library, Faker, for unit testing purposes only. These external libraries managed by composer.
+I use phpunit and one external library, Faker, for unit testing purposes only. These external libraries are managed by composer.
 
 All the commands, as explained below, must be run from `src/` folder, except for test. Test must be run from root folder.
 
@@ -91,7 +91,7 @@ It's also using composer for managing test dependency, so make sure you have [co
 Install required packages, which basically only [phpunit](https://phpunit.de/) & [Faker](https://github.com/fzaninotto/Faker), by running this following command inside root folder:
 
 ```
-composer install
+composer update
 ```
 ### Running Tests
 
