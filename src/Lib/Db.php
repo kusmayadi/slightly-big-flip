@@ -60,7 +60,7 @@ class Db
 
         foreach ($data as $value)
         {
-            if (is_string($value))
+            if (is_string($value) || is_null($value))
                 $value = $this->db->quote($value);
 
             $values[] = $value;
