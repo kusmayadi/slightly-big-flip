@@ -55,17 +55,21 @@ class Db
      */
     public function insert($table, $data)
     {
-        $fieldNames = implode(', ', array_keys($data));
+        $fieldNames = [];
         $values = [];
 
-        foreach ($data as $value)
+        foreach ($data as $key => $value)
         {
-            if (is_string($value) || is_null($value))
-                $value = $this->db->quote($value);
+            if (!is_null($value) && $value != '0000-00-00 00:00:00') {
+                if (is_string($value))
+                    $value = $this->db->quote($value);
 
-            $values[] = $value;
+                $fieldNames[] = $key;
+                $values[] = $value;
+            }
         }
 
+        $fieldNames = implode(', ', $fieldNames);
         $values = implode(', ', $values);
 
         $sql = "INSERT INTO $table ($fieldNames) VALUES ($values)";
