@@ -63,7 +63,8 @@ class Flip
             $db->update('disbursements', $id, [
                 'status' => $response['data']['status'],
                 'receipt' => $response['data']['receipt'],
-                'time_served' => $response['data']['time_served']
+                'time_served' => $response['data']['time_served'],
+                'updated_at' => date('Y-m-d H:i:s')
             ]);
 
             $message = 'OK';
