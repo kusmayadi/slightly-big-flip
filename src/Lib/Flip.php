@@ -37,7 +37,7 @@ class Flip
             $message = 'OK';
             $data = $response['data'];
         } else {
-            $message = $response['data']['message'];
+            $message = 'Error';
             $data = [];
         }
 
